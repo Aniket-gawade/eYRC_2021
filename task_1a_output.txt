@@ -1,0 +1,8 @@
+5, a, north
+5, b, north
+5, c, north
+5, c, west
+4, c, west
+3, c, west
+2, c, west
+1, c, west
