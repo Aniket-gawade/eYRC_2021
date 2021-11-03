@@ -1,3 +1,7 @@
 2, a, east | 3, a, west
 1, b, north | 1, c, south
 2, d, east | 3, d, west
+1,d,north | 1,e,south
+2,d,north | 2,e,south
+3,d,north | 3,e,south
+4,d,north | 4,e,south
