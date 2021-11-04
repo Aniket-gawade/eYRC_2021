@@ -49,7 +49,8 @@ defmodule ToyRobot do
 
   def move_to(n,robot,cli_proc_name, obs_list, element_list) when n <= 0 do
     node  = %ToyRobot{x: robot.x,y: @robot_map_y_atom_to_num[robot.y], facing: robot.facing}
-    [robot, obs_list, element_list] = if(!Enum.member?(element_list, node)) do
+    [robot, obs_list, element_list] = if(node != Enum.at(element_list,length(element_list)-1)) do
+
       element_list = element_list ++ [node]
       is_obs = send_robot_status(robot,cli_proc_name)
 
@@ -73,7 +74,7 @@ defmodule ToyRobot do
 
     node  = %ToyRobot{x: robot.x,y: @robot_map_y_atom_to_num[robot.y], facing: robot.facing}
 
-    [robot, obs_list, element_list] = if(!Enum.member?(element_list, node)) do
+    [robot, obs_list, element_list] = if(node != Enum.at(element_list,length(element_list)-1)) do
       element_list = element_list ++ [node]
 
       is_obs = send_robot_status(robot,cli_proc_name)
